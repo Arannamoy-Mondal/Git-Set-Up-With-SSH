@@ -76,5 +76,7 @@ Speed	Slower	Much faster
 Implementation	Complex	Simple & safer
 
 
-
+```
+git log --oneline --graph --decorate --all
+```
 
