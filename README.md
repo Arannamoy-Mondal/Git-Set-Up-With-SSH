@@ -5,18 +5,16 @@
 - [📋 Step 2: Public Key GitLab/GitHub এ যুক্ত করা](#-step-2-public-key-gitlabgithub-এ-যুক্ত-করা)
 - [🧪 Step 3: GitLab SSH Connection Test](#-step-3-gitlab-ssh-connection-test)
 - [💡 Why ED25519 Instead of RSA 2048-bit](#-why-ed25519-instead-of-rsa-2048-bit)
-- [🛡️ GPG (GNU Privacy Guard) Setup for Verified Commits](#-🛡️-gpg-gnu-privacy-guard-setup-for-verified-commits)
-  - [🧩 Step 1: Check if GPG is Installed](#-step-1-check-if-gpg-is-installed)
-  - [🧠 Step 2: List Existing GPG Keys](#-step-2-list-existing-gpg-keys)
+- [🛡️ GPG (GNU Privacy Guard) Setup for Verified Commits](#-gpg-key-setup-for-git-commit-signing-beginner-friendly)
+  - [🧩 Step 1: Check if GPG is Installed](#-step-1--check-if-gpg-is-installed)
+  - [🧠 Step 2: List Existing GPG Keys](#-step-2--list-existing-keys)
   - [⚙️ Step 3: Generate a New GPG Key](#️-step-3--generate-a-new-gpg-key)
   - [🧾 Step 4: Export Public Key (to Upload on GitHub)](#-step-4-export-public-key-to-upload-on-github)
   - [🔧 Step 5: Tell Git Which Key to Use](#-step-5-tell-git-which-key-to-use)
   - [🪄 Step 6: Enable Auto Signing for Commits](#-step-6-enable-auto-signing-for-commits)
   - [📦 Step 7: Ensure OpenPGP Format](#-step-7-ensure-openpgp-format)
   - [🧪 Step 8: Test Your Setup](#-step-8-test-your-setup)
-  - [⚙️ Optional: Loopback Mode (Terminal Passphrase Input)](#️-optional-loopback-mode-terminal-passphrase-input)
-- [💬 Common Issues & Fixes](#-common-issues--fixes)
-- [🏷️ Acknowledgment](#️-acknowledgment)
+
 
 ## 🔐 Step 1: SSH Key তৈরি করা (if not already)
 
