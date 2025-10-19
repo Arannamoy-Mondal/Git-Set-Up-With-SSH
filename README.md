@@ -130,7 +130,7 @@ gpg --list-secret-keys --keyid-format LONG
 ## ⚙️ Step 3 — Generate a New GPG Key
 
 ```bash
-time gpg --quick-generate-key
+time gpg --full-generate-key
 ```
 
 ## 🧾 Step 4 — Export Public Key (to Upload on GitHub)
