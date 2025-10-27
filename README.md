@@ -164,6 +164,7 @@ git config --global gpg.format openpgp
 ### 🧪 Step 8 — Test Your Setup
 
 ```bash
+echo "export GPG_TTY=$(tty)" >> ~/.bashrc # for ubuntu server
 git commit -S -m "Verified commit test"
 ```
 
