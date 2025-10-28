@@ -73,7 +73,7 @@ if not total_bytes:
     exit()
 
 print(f"\nLanguage Usage Summary for {username}")
-print("==========================================")
+
 
 sorted_langs = sorted(language_totals.items(), key=lambda x: x[1], reverse=True)
 for lang, count in sorted_langs:
@@ -101,3 +101,37 @@ plt.pie(
 )
 plt.title(f"Languages used by {username}")
 plt.show()
+import requests
+
+
+
+headers = {"Authorization": f"token {token}"} if token else {}
+
+
+url = f"https://api.github.com/users/{username}/repos?per_page=100"
+response = requests.get(url, headers=headers)
+
+if response.status_code != 200:
+    print("Error fetching repos:", response.json())
+else:
+    repos = response.json()
+    language_stats = {}
+
+    for repo in repos:
+        repo_name = repo.get('name')
+        if not repo_name:
+            continue
+        langs_url = f"https://api.github.com/repos/{username}/{repo_name}/languages"
+        langs = requests.get(langs_url, headers=headers).json()
+
+        for lang, lines in langs.items():
+            try:
+                language_stats[lang] = language_stats.get(lang, 0) + int(lines)
+            except (ValueError, TypeError):
+                pass
+
+    sorted_stats = dict(sorted(language_stats.items(), key=lambda x: x[1], reverse=True))
+
+    print(f"\nLanguage-wise total lines of code for {username}:\n")
+    for lang, lines in sorted_stats.items():
+        print(f"{lang:15} {lines:,} lines")
