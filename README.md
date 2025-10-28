@@ -164,6 +164,10 @@ git config --global gpg.format openpgp
 ### 🧪 Step 8 — Test Your Setup
 
 ```bash
+sudo apt install pinentry-curses -y
+gpgconf --kill gpg-agent
+gpgconf --launch gpg-agent
+export GPG_TTY=$(tty)
 echo "export GPG_TTY=$(tty)" >> ~/.bashrc # for ubuntu server
 git commit -S -m "Verified commit test"
 ```
