@@ -19,12 +19,21 @@
 ## 🔐 Step 1: SSH Key তৈরি করা (if not already)
 
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/github_key
+```
+```bash
+nano ~/.ssh/config
+```
+```bash
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github_key
 ```
 ## 📋 Step 2: Public key 
 
 ```bash
-cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/github_key.pub
 ```
 
 এই key টি Github, GitLab-এ add করতে হবে।
