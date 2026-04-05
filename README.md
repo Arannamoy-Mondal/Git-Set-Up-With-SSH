@@ -1,8 +1,8 @@
 # Git-Set-Up-With-SSH-For-Authorization And PGP for Verification
 ## 📑 Table of Contents
 
-- [🔐 Step 1: SSH Key তৈরি করা (if not already)](#-step-1-ssh-key-তৈরি-করা-if-not-already)
-- [📋 Step 2: Public Key GitLab/GitHub এ যুক্ত করা](#-step-2-public-key-gitlabgithub-এ-যুক্ত-করা)
+- [🔐 Step 1: SSH Key(if not already)](#-step-1-ssh-key-if-not-already)
+- [📋 Step 2: Public Key GitLab/GitHub](#-step-2-public-key-gitlabgithub)
 - [🧪 Step 3: GitLab SSH Connection Test](#-step-3-gitlab-ssh-connection-test)
 - [💡 Why ED25519 Instead of RSA 2048-bit](#-why-ed25519-instead-of-rsa-2048-bit)
 - [🛡️ GPG (GNU Privacy Guard) Setup for Verified Commits](#-gpg-key-setup-for-git-commit-signing-beginner-friendly)
@@ -16,7 +16,7 @@
   - [🧪 Step 8: Test Your Setup](#-step-8-test-your-setup)
 
 
-## 🔐 Step 1: SSH Key তৈরি করা (if not already)
+## 🔐 Step 1: SSH Key (if not already)
 
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/github_key
@@ -36,7 +36,7 @@ Host github.com
 cat ~/.ssh/github_key.pub
 ```
 
-এই key টি Github, GitLab-এ add করতে হবে।
+
 
 ## 🧪 Step 3: GitLab SSH connection test
 
