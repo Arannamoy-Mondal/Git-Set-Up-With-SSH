@@ -2,7 +2,7 @@
 ## 📑 Table of Contents
 
 - [🔐 Step 1: SSH Key(if not already)](#-step-1-ssh-key-if-not-already)
-- [📋 Step 2: Public Key GitLab/GitHub](#-step-2-public-key-gitlabgithub)
+- [📋 Step 2: Public Key GitLab/GitHub](#-step-2-public-key)
 - [🧪 Step 3: GitLab SSH Connection Test](#-step-3-gitlab-ssh-connection-test)
 - [💡 Why ED25519 Instead of RSA 2048-bit](#-why-ed25519-instead-of-rsa-2048-bit)
 - [🛡️ GPG (GNU Privacy Guard) Setup for Verified Commits](#-gpg-key-setup-for-git-commit-signing-beginner-friendly)
